@@ -1,0 +1,26 @@
+<mat-toolbar-row>
+  <nav class="navbar navbar-expand-lg  navbar-dark bg-dark py-0">
+    <a mat-button class=" navbar-brand px-3 py-2" href="#" routerLink="">
+      ProCoach tuts
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <a mat-button class="nav-item nav-link py-2 px-3" routerLinkActive="active" [routerLink]="item.link"
+          *ngFor="let item of mainLinkList; index as i">
+          {{ item.name }}
+        </a>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <a mat-button class="nav-item nav-link py-2 px-3" [routerLink]="item.link" routerLinkActive="active"
+          *ngFor="let item of authLink; index as i">
+          {{ item.name }}
+        </a>
+      </ul>
+    </div>
+  </nav>
+</mat-toolbar-row>
